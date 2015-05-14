@@ -2135,6 +2135,8 @@ void process_commands()
       break;
     case 115: // M115
       SERIAL_PROTOCOLPGM(MSG_M115_REPORT);
+	  SERIAL_PROTOCOLPGM(STRING_VERSION_CONFIG_H);
+	  SERIAL_PROTOCOLPGM(STRING_CONFIG_H_AUTHOR);	  
       break;
     case 117: // M117 display message
       starpos = (strchr(strchr_pointer + 5,'*'));
