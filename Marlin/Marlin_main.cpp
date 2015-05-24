@@ -1553,11 +1553,11 @@ void process_commands()
             feedrate = homing_feedrate[Z_AXIS];
 
             run_z_probe();
-            SERIAL_PROTOCOLPGM("Bed Position X: ");
+            SERIAL_PROTOCOLPGM("Bed Position,");
             SERIAL_PROTOCOL(current_position[X_AXIS]);
-            SERIAL_PROTOCOLPGM(" Y: ");
+            SERIAL_PROTOCOLPGM(", ");
             SERIAL_PROTOCOL(current_position[Y_AXIS]);
-            SERIAL_PROTOCOLPGM(" Z: ");
+            SERIAL_PROTOCOLPGM(", ");
             SERIAL_PROTOCOL(current_position[Z_AXIS]);
             SERIAL_PROTOCOLPGM("\n");
 
